@@ -42,6 +42,11 @@ LEFT JOIN (SELECT _id clientId, IF(profile.positiveBehaviourManagement=True, 1, 
                   IF(profile.administerMedication = True, 1, 0) administerMedication
             FROM `hireup-beta.hireup_prod.user`) USING (clientId) 
 ```
+The link to the [script](decoder_ss_flattened_table.sql)
+
+Once the connection to Bigquery was ready, one may call from the commend line to run the script.
+```! reserved code ```
+
 
 To see optional items such as restrictive practices, simply uncomment the forth line of the code. 
 
