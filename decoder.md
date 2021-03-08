@@ -52,5 +52,32 @@ You may also have a table to list the mapping code:
 | 2 | anaphylaxis |
 | 3 | allergies |
 
-Alternative, you can insert a life of code like this
+Alternative, you can insert a line of code like this
+
 ```SELECT CURRENT_DATE() ```
+
+# The python Script
+The code block also works with python code, so you can work with a variety of codes.
+```
+import pandas as pd
+import numpy as np
+
+dt = pd.DataFrame([[1, 2, 3], [4, 5, 6]], columns = ['a', 'b'])
+
+dt.show()
+
+for c in dt.columns:
+    print(c)
+
+```
+
+We can also create a bullet list or numbered list like below:
+a bullet list:
+* item a
+* item b
+
+a numerical list:
+1. part 1
+2. part 2
+
+We can also insert a link like this [here is a reference on how the basic syntax of markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
