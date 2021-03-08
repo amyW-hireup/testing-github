@@ -31,7 +31,7 @@ FROM
               MAX(IF(ssItem = 15, 1, 0)) other,
 
         FROM (SELECT DISTINCT _id, ssItem
-              FROM `hireup-beta.hireup_prod.user`
+              FROM `x.user`
               CROSS JOIN UNNEST( profile.supportAreas.ss.items ) AS ssItem
               )
         GROUP BY 1)
@@ -40,7 +40,7 @@ LEFT JOIN (SELECT _id clientId, IF(profile.positiveBehaviourManagement=True, 1, 
                   IF(profile.restrictivePractices = True, 1, 0) restrictivePractices, 
                   IF(profile.prescribedMedication = True, 1, 0) prescribedMedication,
                   IF(profile.administerMedication = True, 1, 0) administerMedication
-            FROM `hireup-beta.hireup_prod.user`) USING (clientId) 
+            FROM `x.user`) USING (clientId) 
 ```
 The link to the [script](decoder_ss_flattened_table.sql)
 
