@@ -45,7 +45,7 @@ LEFT JOIN (SELECT _id clientId, IF(profile.positiveBehaviourManagement=True, 1, 
 The link to the [script](decoder_ss_flattened_table.sql)
 
 Once the connection to Bigquery was ready, one may call from the commend line to run the script.
-```! reserved code ```
+```$ reserved code ```
 
 
 To see optional items such as restrictive practices, simply uncomment the forth line of the code. 
