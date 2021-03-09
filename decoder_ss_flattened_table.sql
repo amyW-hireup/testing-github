@@ -1,7 +1,7 @@
 SELECT *except(behaviour_management, positiveBehaviourManagement, restrictivePractices, prescribedMedication, administerMedication), 
         IF(behaviour_management + positiveBehaviourManagement>0, 1, 0) behaviour_management, angadh,
-        -- -- optional output being the following that are selected seperately
-        -- restrictivePractices, prescribedMedication, administerMedication
+        -- optional output being the following that are selected seperately
+        restrictivePractices, prescribedMedication, administerMedication
 FROM
         (SELECT _id clientId,
               MAX(IF(ssItem = 1, 1, 0)) manual_handling,
