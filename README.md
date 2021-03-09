@@ -28,7 +28,6 @@ FROM
               MAX(IF(ssItem = 12, 1, 0)) behaviour_management,
               MAX(IF(ssItem = 13, 1, 0)) asthma,
               MAX(IF(ssItem = 14, 1, 0)) mental_health,
-              MAX(IF(ssItem = 15, 1, 0)) other,
 
         FROM (SELECT DISTINCT _id, ssItem
               FROM `x.user`
